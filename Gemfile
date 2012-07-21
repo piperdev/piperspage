@@ -9,8 +9,10 @@ end
 group :test, :development do
   gem 'rspec-rails'
   gem 'cucumber'
+  gem 'debugger'
 end
 
 gem 'rails', '3.2.6'
 gem 'pg'
 gem 'jquery-rails'
+gem 'haml-rails'
