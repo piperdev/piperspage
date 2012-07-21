@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  background-color: $light-gray;
+  height: 100%;
+}
+
+.page {
+  @extend .container;
+  min-height: 100%;
+  background-color: $white;
+}
+
+#header {
+  border-bottom: 1px solid $gray;
+
+  #logo {
+    text-align: center;
+
+    img {
+      padding: $medium-spacing;
+      width: 136px;
+    }
+  }
+
+  #nav {
+    a {
+      font-size: $medium-font;
+    }
+  }
+}
