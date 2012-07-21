@@ -1,0 +1,6 @@
+.article
+  - if article.featured
+    %h2= article.title
+  - else
+    %h3= article.title
+  = simple_format article.stub

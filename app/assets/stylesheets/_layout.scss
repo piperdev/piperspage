@@ -5,17 +5,15 @@
 
 body, html {
   background-color: $light-gray;
-  height: 100%;
 }
 
 .page {
   @extend .container;
-  min-height: 100%;
-  background-color: $white;
 }
 
 #header {
-  border-bottom: 1px solid $gray;
+  background-color: $white;
+  margin-bottom: $medium-spacing;
 
   #logo {
     text-align: center;
@@ -23,12 +21,6 @@ body, html {
     img {
       padding: $medium-spacing;
       width: 136px;
-    }
-  }
-
-  #nav {
-    a {
-      font-size: $medium-font;
     }
   }
 }

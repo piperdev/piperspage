@@ -3,8 +3,26 @@ body {
 }
 
 h1 {
-  font-size: $large-font;
+  font-size: $giant-text;
   font-weight: 700;
-  line-height: $large-font;
-  margin: $medium-spacing 0;
+  line-height: $giant-text;
+  margin: $large-spacing 0;
+}
+h2 {
+  font-size: $medium-text;
+  font-weight: 700;
+  line-height: $medium-text + 4px;
+  padding-bottom: $medium-spacing;
+}
+h3 {
+  font-size: $small-text;
+  font-weight: 700;
+  line-height: $small-text + 4px;
+  padding-bottom: $small-spacing;
+}
+
+#nav {
+  a {
+    font-size: $medium-text;
+  }
 }

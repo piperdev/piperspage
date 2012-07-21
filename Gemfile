@@ -12,6 +12,8 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'cucumber'
   gem 'debugger'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 gem 'rails', '3.2.6'

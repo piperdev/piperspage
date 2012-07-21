@@ -7,5 +7,7 @@
     = csrf_meta_tags
 %body
   .page
-    = render partial: 'header'
-    = yield
+    .row
+      = render partial: 'header'
+    .row
+      = yield
