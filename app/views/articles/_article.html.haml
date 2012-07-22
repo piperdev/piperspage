@@ -1,6 +1,7 @@
-.article
-  - if article.featured
-    %h2= article.title
-  - else
-    %h3= article.title
-  = simple_format article.stub
+= link_to article_path(article), class: "article-link" do
+  .article
+    - if article.featured
+      %h2= article.title
+    - else
+      %h3= article.title
+    = simple_format article.stub

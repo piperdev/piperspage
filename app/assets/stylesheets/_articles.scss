@@ -1,15 +1,22 @@
-.column {
+.article {
+  @include box-shadow($dark-gray 2px 2px 6px);
   background-color: $white;
+  padding: $small-spacing;
 
-  .article {
-    padding: $small-spacing;
+  h2, h3 {
+    text-align: center;
+  }
+}
 
-    h3 {
-      text-align: center;
-    }
+.column .article {
+  margin: $medium-spacing 0;
+}
 
-    &:not(:first-of-type) {
-      border-top: 1px solid $gray;
-    }
+.article-link {
+  color: $dark-gray;
+
+  .article:hover {
+    color: $dark-gray;
+    @include box-shadow($dark-blue 2px 2px 4px);
   }
 }

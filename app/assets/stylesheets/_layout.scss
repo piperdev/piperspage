@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+a:hover {
+  text-decoration: none;
+}
 
 body, html {
   background-color: $light-gray;
@@ -14,6 +17,7 @@ body, html {
 #header {
   background-color: $white;
   margin-bottom: $medium-spacing;
+  @include box-shadow($dark-gray 2px 2px 6px);
 
   #logo {
     text-align: center;

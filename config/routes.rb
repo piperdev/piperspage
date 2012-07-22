@@ -1,6 +1,6 @@
 Piperspage::Application.routes.draw do
 
-  resource :articles, only: [:index]
+  resources :articles, only: [:index, :show]
 
   root :to => "articles#index"
 end

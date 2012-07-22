@@ -20,4 +20,18 @@ describe ArticlesController do
       assigns[:right_column].should == right_column
     end
   end
+
+  describe "#show" do
+    subject { response }
+    let(:article) { double(Article) }
+
+    before do
+      Article.stub(:find).and_return(article)
+      get :show, id: 1
+    end
+
+    it "should assign the article ivar" do
+      assigns[:article].should == article
+    end
+  end
 end
