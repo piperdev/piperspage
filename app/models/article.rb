@@ -1,7 +1,9 @@
 class Article < ActiveRecord::Base
   attr_accessible :title, :body, :featured
 
-  validates :title, :body, :presence => true
+  belongs_to :user
+
+  validates :title, :body, :user_id, :presence => true
 
   class << self
     def left_column

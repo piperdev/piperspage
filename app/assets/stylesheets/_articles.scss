@@ -1,7 +1,5 @@
 .article {
-  @include box-shadow($dark-gray 2px 2px 6px);
-  background-color: $white;
-  padding: $small-spacing;
+  @extend .content-box;
 
   h2, h3 {
     text-align: center;

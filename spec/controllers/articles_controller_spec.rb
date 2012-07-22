@@ -34,4 +34,50 @@ describe ArticlesController do
       assigns[:article].should == article
     end
   end
+
+  context "authenticated methods" do
+    let(:user) { FactoryGirl.create(:user) }
+
+    before do
+      sign_in user
+      controller.stub(:current_user).and_return(user)
+    end
+
+    describe "#new" do
+      subject { response }
+      before do
+        get :new
+      end
+
+      it "should assign the article ivar" do
+        assigns[:article].should be_new_record
+      end
+    end
+
+    describe "#create" do
+      subject { response }
+
+      before do
+        post :create, article: article_params
+      end
+
+      context "with valid params" do
+        let(:article_params) { {title: "Foo article",
+                        body: "So bar it's baz"} }
+
+        it "should assign the article ivar" do
+          assigns[:article].should be_persisted
+          assigns[:article].user.should == user
+        end
+
+        it { should redirect_to article_path(assigns[:article]) }
+      end
+
+      context "with invalid params" do
+        let(:article_params) { {} }
+
+        it { should render_template("articles/new") }
+      end
+    end
+  end
 end

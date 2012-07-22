@@ -2,6 +2,7 @@ FactoryGirl.define do
   factory :article do
     title { Faker::Lorem.words(4).join(" ").titleize }
     body { Faker::Lorem.paragraphs(3).join("\n") }
+    user
   end
 
   trait :featured do

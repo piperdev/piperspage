@@ -14,10 +14,15 @@ body, html {
   @extend .container;
 }
 
-#header {
+.content-box {
   background-color: $white;
-  margin-bottom: $medium-spacing;
   @include box-shadow($dark-gray 2px 2px 6px);
+  padding: $small-spacing;
+}
+
+#header {
+  @extend .content-box;
+  margin-bottom: $medium-spacing;
 
   #logo {
     text-align: center;
