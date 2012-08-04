@@ -1,4 +1,7 @@
 .span12
-  .article
+  .article.full
     %h2= @article.title
+    .author
+      by
+      %h4= @article.user.name
     =simple_format @article.body

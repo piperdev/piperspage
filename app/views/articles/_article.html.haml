@@ -4,4 +4,7 @@
       %h2= article.title
     - else
       %h3= article.title
+    .author
+      by
+      %h4= article.user.name
     = simple_format article.stub
