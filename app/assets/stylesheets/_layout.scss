@@ -7,7 +7,7 @@ a:hover {
 }
 
 body, html {
-  background-color: $light-gray;
+  background-color: $white;
 }
 
 .page {
@@ -15,21 +15,18 @@ body, html {
 }
 
 .content-box {
-  background-color: $white;
+  background-color: $faint-gray;
   @include box-shadow($dark-gray 2px 2px 6px);
   padding: $small-spacing;
 }
 
 #header {
   @extend .content-box;
+  padding: $large-spacing;
   margin-bottom: $medium-spacing;
 
-  #logo {
-    text-align: center;
-
-    img {
-      padding: $medium-spacing;
-      width: 136px;
-    }
+  img {
+    padding: $medium-spacing;
+    width: 136px;
   }
 }

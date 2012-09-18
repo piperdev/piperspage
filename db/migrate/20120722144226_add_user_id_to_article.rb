@@ -5,7 +5,6 @@ class AddUserIdToArticle < ActiveRecord::Migration
     user = User.find_or_create_by_email(email: "default@piperspage.com", password: "abc123")
     execute "UPDATE articles SET user_id = #{user.id}"
 
-    remove_index :articles, "user_id"
     change_column :articles, :user_id, :integer, null: false, references: :users
   end
 

@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create]
+  layout "home", only: [:index, :show]
 
   def index
     @left_column = Article.left_column

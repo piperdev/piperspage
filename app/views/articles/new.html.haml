@@ -1,7 +1,6 @@
-.span12
-  .content-box
-    = simple_form_for @article do |f|
-      = f.input :title
-      = f.input :body
+= simple_form_for @article do |f|
+  = f.input :title
+  = f.input :body
 
-      = f.submit
+  = f.submit
+  = link_to "Cancel", admin_path

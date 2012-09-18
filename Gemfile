@@ -14,11 +14,11 @@ group :test, :development do
   gem 'debugger'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'mailcatcher'
 end
 
 gem 'rails', '3.2.6'
 gem 'pg'
-gem 'schema_plus'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'devise'
